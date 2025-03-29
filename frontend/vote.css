@@ -1,0 +1,81 @@
+body{
+    background-color: rgba(17, 24, 39, 1);
+    color: whitesmoke;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#voting-section{
+    display: none;
+    color: gray;
+    border-top: 5px solid rgb(94, 94, 255);
+    width: 100%; /* Make it fit mobile screens */
+    max-width: 500px; /* Prevent it from being too large on bigger screens */
+    height: auto; /* Let the height adjust dynamically */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+    background-color: rgba(31, 41, 55, 1);
+}
+.voter-page{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    border-top: 5px solid rgb(94, 94, 255);
+    width: 100%; /* Make it fit mobile screens */
+    max-width: 500px; /* Prevent it from being too large on bigger screens */
+    height: auto; /* Let the height adjust dynamically */
+    background: rgba(31, 41, 55, 1);
+    padding: 20px;
+    justify-self: center;
+    border-radius: 10px;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+}
+input{
+    border: 0;
+    outline: 0;
+    margin-bottom: 1.5rem; /* Reduce spacing for better mobile fit */
+    padding: 10px;
+    /* Full width for smaller screens */
+    font-size: 16px; /* Bigger text for readability */
+    background-color: inherit;
+    color: whitesmoke;
+    border: 1px solid rgba(47, 55, 69, 1);
+    border-radius: 3px;
+}
+@media screen and (min-width: 648px) {
+    .voter-page {
+        width: 450px; /* Slightly wider for small screens */
+        padding: 15px;
+    }
+
+    button {
+        padding: 14px; /* Bigger tap area */
+        font-size: 12px;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+button{
+    width: 100%;
+    text-align: center;
+    background-color: rgb(94, 94, 255);
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: #f1f1f1;
+    font-weight: bolder;
+}
+input:focus{
+    outline: 2px solid rgb(94, 94, 255);
+}
+button:focus{
+    outline: 2px solid rgb(94, 94, 255);
+
+}
+button:hover{
+    background-color: rgb(44, 61, 87)
+}

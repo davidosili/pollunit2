@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: rgba(17, 24, 39, 1);
+    color: rgb(220, 223, 233);
+}
+
+
+/* Positioning the Dropdown Button at the Top Right */
+.button-drop {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    background-color: inherit;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100px;
+    height: fit-content;
+    text-align: end;
+}
+
+.button-drop > img{
+    width: 20%;
+}
+
+/*log out button*/
+.nav > .button{
+    display: block;
+    margin: 20px auto; /* Centers horizontally */
+    text-align: center;
+    border: none;
+    background-color: rgb(94, 94, 255);
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 10px;
+    width: 100%;
+    transition: 200ms;
+    font-size: 15px;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+.button:hover{
+    background-color: rgb(77, 77, 201);
+}
+/* Dropdown Content (Initially Small & Hidden) */
+.nav {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 20px;
+    border-radius: 10px;
+    width: 95%;
+    color: white;
+    background-color: rgba(31, 41, 55, 1);
+
+    /* Hidden state */
+    transform: scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s;
+}
+
+/* When active, smoothly grow into view */
+.nav.active {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Dropdown Links */
+.nav a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    transition: 0.1s;
+    color: white;
+    text-transform: capitalize;
+}
+
+.nav a:hover {
+    background-color: rgb(44, 61, 87);
+    border-radius: 10px;
+    color: #f1f1f1;
+}
+
+#welcome-message{
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+/* Close Button */
+.close-btn {
+    width: 30px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #333;
+    padding: 8px;
+    border-radius: 3px;
+}
+.close-btn > img{
+    width: 100%;
+}
+.dropdown{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid  rgba(47, 55, 69, 1);
+    padding: 1.5rem 1.2rem;
+    background-color: rgba(31, 41, 55, 1);
+    height: fit-content;
+}
+label{
+    text-transform: capitalize;
+    font-weight: bolder;
+    text-rendering: optimizeLegibility;
+    font-size: 12px;
+}
+.poll-container{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.poll-box, .created-polls{
+    max-width: 768px;
+}
+
+.header{
+    line-height: 1.2rem;
+    color: grey;
+    text-align: center;
+    line-height: 10px;
+    padding: 20px;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.header > h2{
+    font-weight: bolder;
+    color: white;
+}
+.poll-box{
+    background-color:  rgba(31, 41, 55, 1);
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #030b20;
+    padding: 20px;
+    border-top: 5px solid rgb(94, 94, 255);
+}
+.created-polls{
+    background-color:  inherit;
+    width: 100%;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 20px;
+}
+input{
+    width: 100%;
+    padding: 10px 10px;
+    background-color: inherit;
+    border: 1px solid  rgba(47, 55, 69, 1);
+    color: white;
+    outline-color: blue;
+    margin: 5px;
+    border-radius: 5px;
+}
+input:focus{
+    outline: 2px solid rgb(94, 94, 255);
+    background-color: inherit;
+}
+.btn > button{
+    width: 100%;
+    text-align: center;
+    background-color: rgb(94, 94, 255);
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: #f1f1f1;
+    font-weight: bolder;
+}
+.btn{
+    padding: 10px 10px;
+    margin: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+}
+.poll-created{
+    text-align: center;
+}

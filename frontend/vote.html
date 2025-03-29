@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote on a Poll</title>
+    <link rel="stylesheet" href="vote.css">
+</head>
+<body>
+    <h2 id="poll-question"></h2>
+
+    <!-- Voter Authentication -->
+    <div id="voter-auth" class="voter-page">
+        <input type="text" id="voter-name" placeholder="Enter your name" required>
+        <input type="email" id="voter-email" placeholder="Enter your email" required>
+        <button id="auth-btn">Proceed to Vote</button>
+    </div>
+    
+    <!-- Voting Section (Hidden by Default) -->
+    <div id="voting-section">
+        <p>make a choice:</p>
+        <div id="options-container"></div>
+        <button id="vote-btn">Vote</button>
+    </div>
+    
+    <p id="message"></p>    
+
+    <script src="vote.js"></script>
+</body>
+</html>
+

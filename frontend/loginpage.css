@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; 
+
+    padding: 0;
+    margin: 0;
+    
+    /* Centering using flexbox */
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: rgba(17, 24, 39, 1); /* Optional background color */
+}
+.container > h2{
+    text-align: center;
+}
+.parent{
+    color: white;
+    border-top: 5px solid rgb(94, 94, 255);
+    width: 100%; /* Make it fit mobile screens */
+    max-width: 500px; /* Prevent it from being too large on bigger screens */
+    height: auto; /* Let the height adjust dynamically */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+input {
+    border: 0;
+    outline: 0;
+    margin-bottom: 1.5rem; /* Reduce spacing for better mobile fit */
+    padding: 10px;
+    width: 100%; /* Full width for smaller screens */
+    font-size: 16px; /* Bigger text for readability */
+    background-color: inherit;
+    color: whitesmoke;
+    border: 1px solid rgba(47, 55, 69, 1);
+    border-radius: 3px;
+}
+input:focus{
+    background-color: inherit;
+    outline: 2px solid rgb(94, 94, 255);
+}
+
+button {
+    font-weight: bolder;
+    width: 100%; /* Full width for better touch interaction */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    outline: 0;
+    border: 0;
+    background: rgb(60, 138, 201);
+    border-radius: 5px;
+    padding: 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+button:hover {
+    background: rgb(50, 50, 240);
+}
+
+.login {
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 15px;
+}
+
+/* Mobile-Specific Styles */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 65%; /* Slightly wider for small screens */
+        padding: 15px;
+    }
+
+    button {
+        padding: 14px; /* Bigger tap area */
+        font-size: 16px;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: 10px;
+    color: rgb(60, 138, 201);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.parent{
+    background-color: rgba(31, 41, 55, 1);
+}
+.container{
+    width: 100%;
+}
+.center{
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+}
+label{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: bolder;
+    color: grey;
+    font-weight: 400;
+}
