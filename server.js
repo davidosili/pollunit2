@@ -29,11 +29,7 @@ app.use(express.json());
 app.use(cors()); 
 
 // If you want to restrict CORS to your frontend only:
-app.use(cors({
-    origin: "http://127.0.0.1:5501",
-    methods: "GET,POST,PUT,DELETE",
-    allowedHeaders: "Content-Type,Authorization"
-}));
+
 
 app.use("/api", pollRoutes);
 
