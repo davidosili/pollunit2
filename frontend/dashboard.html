@@ -76,7 +76,7 @@
     }
 
     try {
-        const response = await fetch("http://localhost:5000/polls/create", {
+        const response = await fetch("https://pollunit2-1.onrender.com/polls/create", {
             method: "POST",
             headers: { 
                 "Content-Type": "application/json",
@@ -174,7 +174,7 @@ async function loadPolls() {
             });
 
             // ✅ Generate voting link
-            const pollLink = `http://localhost:5000/vote.html?pollId=${poll._id}`;
+            const pollLink = `https://pollunit2-1.onrender.com/vote.html?pollId=${poll._id}`;
 
             pollDiv.innerHTML = `
                 <strong style="color: white; font-weight: 700">${poll.question}</strong><br><br>
