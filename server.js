@@ -161,7 +161,12 @@ app.get("/dashboard", authenticateUser, async (req, res) => {
 
 // ✅ Start Server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
+app.listen(PORT, () => {
+    console.log(`🚀 Server running on port ${PORT}`);
+    console.log(`🌍 Access it locally at http://localhost:${PORT}`);
+    console.log(`🔗 Deployed version: https://pollunit2-1.onrender.com`);
+});
+
 
 //profile
 app.get("/profile", authenticateUser, async (req, res) => {
