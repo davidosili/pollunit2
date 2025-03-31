@@ -11,6 +11,21 @@ const dotenv = require("dotenv");
 const pollRoutes = require("./routes/pollRoutes");
 const voterRoutes = require("./routes/voterRoutes"); // ✅ ADD THIS
 
+const allowedOrigins = [
+    "http://127.0.0.1:5501", // Local development
+    "https://pollunit2-1.onrender.com" // Render frontend
+];
+
+app.use(cors({
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    }
+}));
+
 
 const path = require("path");
 
