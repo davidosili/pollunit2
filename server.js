@@ -224,7 +224,7 @@ app.post("/request-password-reset", async (req, res) => {
             }
         });
 
-        const resetLink = `http://127.0.0.1:5501/backend-project/frontend/reset-password.html?token=${resetToken}`;
+        const resetLink = `https://pollunit2-1.onrender.com/backend-project/frontend/reset-password.html?token=${resetToken}`;
         console.log("🔗 Generated Reset Link:", resetLink);
 
         await transporter.sendMail({
