@@ -126,7 +126,7 @@ window.onload = displayPollLinks;
 //loadpolls
 async function loadPolls() {
     try {
-        const response = await fetch("http://localhost:5000/api/polls", {
+        const response = await fetch("https://pollunit2-1.onrender.com/api/polls", {
             headers: {
                 "Authorization": `Bearer ${localStorage.getItem("token")}`
             }
