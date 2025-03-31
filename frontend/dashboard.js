@@ -27,7 +27,7 @@ async function loginUser() {
     const password = document.getElementById("password").value;
 
     try {
-        const response = await fetch("http://localhost:5000/auth/login", {
+        const response = await fetch("https://pollunit2-1.onrender.com/auth/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, password })
