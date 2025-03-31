@@ -16,15 +16,6 @@ const allowedOrigins = [
     "https://pollunit2-1.onrender.com" // Render frontend
 ];
 
-app.use(cors({
-    origin: function (origin, callback) {
-        if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true);
-        } else {
-            callback(new Error("Not allowed by CORS"));
-        }
-    }
-}));
 
 
 const path = require("path");
@@ -57,7 +48,17 @@ app.use("/voters", voterRoutes);
 
 // Middleware
 app.use(express.json()); // Enable JSON body parsing
-app.use(cors()); // Allow cross-origin requests
+
+app.use(cors({
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    }
+}));
+
 
 // Connect to MongoDBH
 const mongoURI = process.env.MONGO_URI;
