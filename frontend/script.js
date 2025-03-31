@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000"; // Backend URL
+const API_URL = "https://pollunit2-1.onrender.com"; // Backend URL
 
 const urlParams = new URLSearchParams(window.location.search);
 const token = urlParams.get("token");
