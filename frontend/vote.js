@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     try {
         // ✅ Fetch poll details
-        const response = await fetch(`http://localhost:5000/polls/${pollId}`);
+        const response = await fetch(`https://pollunit2-1.onrender.com/polls/${pollId}`);
         const poll = await response.json();
 
         if (!response.ok) {
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
 
             try {
-                const response = await fetch("http://localhost:5000/voters/authenticate", {  // ✅ Fixed API route
+                const response = await fetch("https://pollunit2-1.onrender.com/voters/authenticate", {  // ✅ Fixed API route
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ name, email })
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             }            
 
             try {
-                const voteResponse = await fetch(`http://localhost:5000/polls/${pollId}/vote`, {
+                const voteResponse = await fetch(`https://pollunit2-1.onrender.com/polls/${pollId}/vote`, {
                     method: "POST",
                     headers: { 
                         "Content-Type": "application/json",
