@@ -70,7 +70,7 @@ async function vote(pollId, optionIndex) {
     }
 
     try {
-        const response = await fetch(`http://localhost:5000/polls/${pollId}/vote`, {
+        const response = await fetch(`https://pollunit2-1.onrender.com/polls/${pollId}/vote`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
