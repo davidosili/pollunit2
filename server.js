@@ -19,7 +19,6 @@ const allowedOrigins = [
 ];
 
 require("dotenv").config()
-const nodemailer = require("nodemailer");
 
 const path = require("path");
 
