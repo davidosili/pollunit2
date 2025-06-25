@@ -10,13 +10,16 @@ const crypto = require("crypto");
 const dotenv = require("dotenv");
 const pollRoutes = require("./routes/pollRoutes");
 const voterRoutes = require("./routes/voterRoutes"); // ✅ ADD THIS
+const nodemailer = require("nodemailer");
+
 
 const allowedOrigins = [
     "http://127.0.0.1:5501", // Local development
     "https://pollunit2-1.onrender.com" // Render frontend
 ];
 
-
+require("dotenv").config()
+const nodemailer = require("nodemailer");
 
 const path = require("path");
 
@@ -181,9 +184,9 @@ app.get("/profile", authenticateUser, async (req, res) => {
 //Password reset
 
 // 📌 Password Reset Request Route
-require("dotenv").config(); // Ensure this is at the top of your file
+ // Ensure this is at the top of your file
 
-const nodemailer = require("nodemailer");
+
 
 const transporter = nodemailer.createTransport({
     service: "gmail",
