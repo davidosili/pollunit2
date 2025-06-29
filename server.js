@@ -32,7 +32,8 @@ app.use(cors());
 
 // If you want to restrict CORS to your frontend only:
 
-
+// Serve static files from "public" or your chosen directory
+app.use(express.static(path.join(__dirname, "public")));
 app.use("/api", pollRoutes);
 
 // Database Connection
