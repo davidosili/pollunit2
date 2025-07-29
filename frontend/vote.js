@@ -132,3 +132,5 @@ document.addEventListener("DOMContentLoaded", async () => {
         console.error("Poll fetch error:", error);
     }
 });
+
+//edit for caching of each votes
